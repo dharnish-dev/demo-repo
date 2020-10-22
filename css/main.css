@@ -71,3 +71,112 @@ header{
 .div-btn .btn:hover{
 	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
+
+/* Card Section */
+#card-section{
+	display: grid;
+	grid-template-columns: repeat(3, auto);
+	grid-template-rows: repeat(3, auto);
+	grid-gap: 20px;
+	justify-items: center;
+	grid-auto-flow: row;
+	width: 100vw;
+	height: 80vh;
+	position: relative;
+	/*background-color: #000;*/
+}
+
+.card{
+	/*background: #fff;*/
+	display: inline-block;
+	height: 200px;
+	width: 200px;
+	padding: 20px;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	transform-style: preserve-3d;
+	transition: all 1.5s ease;
+}
+
+.card1{
+	width: 400px;
+	grid-column-start: span 2;
+	justify-self: start;
+}
+.card1 .front{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.card1 .front div{
+	width: 50%;
+}
+.card1 .front div p{
+	font-size: 20px;
+}
+
+.card1 .front div img{
+	width: 100px;
+	height: 100px;
+}
+
+.card span{
+	margin-top: 20px;
+	font-size: 50px;
+}
+
+.card:hover{
+	transform: rotateY(180deg);
+}
+
+.front{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	backface-visibility: hidden;
+	background: rgb(96 129 252);
+	/*color: #333 #ffc720;*/
+	color: #fff;
+	text-align: center;
+	border-radius: 30px;
+	font-weight: bold;
+	font-size: 15px;
+	box-shadow: 0 0 33px rgba(16,14,23,.33);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.back{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	backface-visibility: hidden;
+	background: #fafafa;
+	/*color: #333;*/
+	color: rgb(96 129 252);
+	text-align: center;
+	transform: rotateY(180deg);
+	border-radius: 30px;
+	font-weight: bold;
+	font-size: 25px;
+	box-shadow: 0 0 33px rgba(16,14,23,.33);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+#tempSpan{
+	font-size: 25px;
+	font-weight: bold;
+}
+
+sup{
+ 	vertical-align: super;
+    font-size: smaller;
+}
