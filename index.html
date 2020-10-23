@@ -7,12 +7,12 @@
 	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 	<title></title>
 </head>
-
 <body>
 	<header>
-		<h1>Find Weather</h1>
+		<h1 id="headerText">Weather Finder</h1>
 	</header>
 	<main>
+		<!-- Search Section -->
 		<section id="search-section">
 			<div class="search-container">
 				<input class="input-box" type="text" name="location" placeholder="Enter Location">
@@ -23,65 +23,77 @@
 			</div>
 		</section>
 		<br><br>
-		<section id="card-section">
-			<div class="card card1">
-				<div class="front">
-					<div>
-						<p id="climate"></p>
-						<p id="climateDesc"></p>
+		<!-- Card Section -->
+		<section  id="card-section" class="card-class">
+			<div id="card-div">
+				<!-- Card One -->
+				<div class="card card1">
+					<div class="front">
+						<div>
+							<h1 id="climateDesc"></h1>
+						</div>
+						<div>
+							<img id="frontImg" src="" alt="weather-icon">
+						</div>
 					</div>
-					<div>
-						<img id="frontImg" src="" alt="weather-icon">
+					<div class="back">
+						<div class="back-div-1">
+							<p>Date & time</p>
+							<img id="backImg" src="" alt="weather-icon">
+							<p><span id="placeIcon"><i class="fas fa-map-marker-alt"></i></span>  <span id="place"></span></p>
+						</div>
+						<div class="back-div-2">
+							<h1 id="climate"></h1><br>
+							<p>Sunrise: <span id="sunrise"></span></p>
+							<p>Sunset : <span id="sunset"></span></p>
+						</div>
 					</div>
-					<!-- <p id="frontImg"></p> -->
 				</div>
-				<div class="back">
-					<div></div>
-					<div>
-						
+				<!-- Card Two -->
+				<div class="card card2">
+					<div class="front">
+						<h1>Temperature</h1>
+						<span><i class="fas fa-temperature-high"></i></span>
+					</div>
+					<div class="back">
+						<p>Temperature</p>
+						<p id="temperature">
+							<span id="tempSpan"></span> <sup>o</sup>C
+						</p>
 					</div>
 				</div>
-			</div>
-			<div class="card card2">
-				<div class="front">
-					<h1>Temperature</h1>
-					<span><i class="fas fa-temperature-high"></i></span>
+				<!-- Card Three -->
+				<div class="card card3">
+					<div class="front">
+						<h1>Pressure</h1>
+						<span><i class="fas fa-exclamation-triangle"></i></span>
+					</div>
+					<div class="back">
+						<p>Pressure</p>
+						<p><span id="pressure"></span> hPa</p>
+					</div>
+				</div>	
+				<!-- Card Four -->
+				<div class="card card4">
+					<div class="front">
+						<h1>Humidity</h1>
+						<span><i class="fas fa-tint"></i></span>
+					</div>
+					<div class="back">
+						<p>Humidity</p>
+						<p><span id="humidity"></span> %</p>
+					</div>
 				</div>
-				<div class="back">
-					<p>Temperature</p>
-					<p id="temperature">
-						<span id="tempSpan"></span><sup>o</sup>C
-					</p>
-				</div>
-			</div>
-			<div class="card card3">
-				<div class="front">
-					<h1>Pressure</h1>
-					<span><i class="fas fa-exclamation-triangle"></i></span>
-				</div>
-				<div class="back">
-					<p>Pressure</p>
-					<p id="pressure"></p>
-				</div>
-			</div>	
-			<div class="card card4">
-				<div class="front">
-					<h1>Humidity</h1>
-					<span><i class="fas fa-tint"></i></span>
-				</div>
-				<div class="back">
-					<p>Humidity</p>
-					<p id="humidity"></p>
-				</div>
-			</div>
-			<div class="card card5">
-				<div class="front">
-					<h1>Wind Speed</h1>
-					<span><i class="fas fa-wind"></i></span>
-				</div>
-				<div class="back">
-					<p>Wind Speed</p>
-					<p id="windSpeed"></p>
+				<!-- Card Five -->
+				<div class="card card5">
+					<div class="front">
+						<h1>Wind Speed</h1>
+						<span><i class="fas fa-wind"></i></span>
+					</div>
+					<div class="back">
+						<p>Wind Speed</p>
+						<p><span id="windSpeed"></span> m/s</p>
+					</div>
 				</div>
 			</div>
 		</section>
