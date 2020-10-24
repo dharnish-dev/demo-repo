@@ -1,23 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,900&display=swap');
+
 *{
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	font-family: 'Roboto', sans-serif;
 }
+/* Body */
 
 body{
 	max-width: 100vw;
 	max-height: 100vh;
-	font-family:  Arial, Helvetica, sans-serif;
 	background-color: rgb(96 129 252);	
 }
-
+/* Header */
 header{
 	text-align: center;
 	font-weight: 900;
 	font-size: 20px;
 	margin: 20px 0;
 	color: #ffffff;
+	position: relative;
 }
+
+/*Header button*/
+#header-btn{
+	position: absolute;	
+	top: 0;
+	right: 60px;
+	border-radius: 50px;
+}
+
+.other-location-btn{
+	padding: 10px 10px;
+	color: #ffffff;
+	border: none;
+	border-radius: 50px;
+	outline: none;
+	background: rgb(96 129 252);
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+.other-location-btn i{
+	font-size: 15px;
+	color: #ffffff;
+}
+/* Tool Tip*/
+.tooltip:before{
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 33px;
+	width: 35px;
+	height: 20px;
+	background: rgb(96 129 252);
+	transform: rotate(45deg);
+}
+
+.tooltip{
+	position: absolute;
+	top: 60px;
+	right: 20px;
+	background: rgb(96 129 252);
+	color: #fff;
+	width: 250px;
+	height: 100px;
+	padding: 10px;
+	border-radius: 4px;	
+	text-align: center;
+	visibility: hidden;
+	opacity: 0;
+	transition: 0.5s;
+}
+.tooltip p{
+	margin-top: 13px;
+}
+
+#header-btn:hover + .tooltip{
+	visibility: visible;
+	opacity: 1;
+	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
 /* Search Section */
 
 section{
@@ -28,13 +91,13 @@ section{
 }
 
 .search-container{
-	width: 30%;
+	width: 380px;
 	height: 60px;
-	background-color: #fff;
+	background-color: #ffffff;
 	border-radius: 50px;
 	position: relative;
 	margin-bottom: 20px;
-	/*display: inline-block;*/
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
 .search-container:hover{
@@ -45,20 +108,27 @@ section{
 	position: relative;
 	top: 0;
 	left: 0;
-	width: 85%;
-	height: 100%;
+	width: 330px;
+	height: 60px;
 	border-radius: 50px;
 	padding: 20px;
 	font-weight: 500;
 	font-size: 20px;
-	outline: 0;
+	outline: none;
 	border: none;
+	background-color: none;
 }
+
+input[type="text"]{
+	color: #393e46;
+}
+
 .search-container span{
 	font-size: 30px;
 	position: absolute;
 	top: 15px;
 	right: 20px;
+	color: #393e46;
 }
 
 .div-btn .btn{
@@ -67,13 +137,15 @@ section{
 	font-weight: 500;
 	font-size: 20px;
 	outline: none;
-	box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 	border: none;
 	outline: none;
+	cursor: pointer;
+	color: #393e46;
 }
 
 .div-btn .btn:hover{
-	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+	box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
 }
 
 /* Card Section */
@@ -81,7 +153,7 @@ section{
 	width: 100vw;
 	height: 80vh;
 }
-.card-class{
+.hidden{
 	display: none;
 }
 
