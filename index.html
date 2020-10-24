@@ -5,26 +5,33 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-	<title></title>
+	<title>Weather Finder</title>
 </head>
 <body>
 	<header>
 		<h1 id="headerText">Weather Finder</h1>
+		<div id="header-btn">
+			<button class="other-location-btn hidden"><i class="fas fa-search"></i></button>
+		</div>
+		<div class="tooltip">
+			<p>Click to search other locations <span><i class="fas fa-map-marker-alt"></i></span></p>
+		</div>
 	</header>
 	<main>
 		<!-- Search Section -->
-		<section id="search-section">
+		<section id="search-section" class="search">
 			<div class="search-container">
-				<input class="input-box" type="text" name="location" placeholder="Enter Location">
+				<input class="input-box" type="text" name="location" placeholder="Enter Location" autocomplete="off">
 				<span><i class="fas fa-search-location"></i></span>
 			</div>
 			<div class="div-btn">
 				<button type="submit" class="btn">Search</button>
 			</div>
 		</section>
-		<br><br>
+		
 		<!-- Card Section -->
-		<section  id="card-section" class="card-class">
+		<section  id="card-section" class="hidden">
+			<!-- Card Div -->
 			<div id="card-div">
 				<!-- Card One -->
 				<div class="card card1">
@@ -49,6 +56,7 @@
 						</div>
 					</div>
 				</div>
+
 				<!-- Card Two -->
 				<div class="card card2">
 					<div class="front">
@@ -96,7 +104,9 @@
 					</div>
 				</div>
 			</div>
+			<!-- End Card Div -->
 		</section>
+		<!-- End Section -->
 	</main>
 
 <script type="text/javascript" src="js/main.js"></script>
