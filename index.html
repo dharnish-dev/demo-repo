@@ -20,6 +20,7 @@
 	<main>
 		<!-- Search Section -->
 		<section id="search-section" class="search">
+			<span id="alert"></span>
 			<div class="search-container">
 				<input class="input-box" type="text" name="location" placeholder="Enter Location" autocomplete="off">
 				<span><i class="fas fa-search-location"></i></span>
@@ -36,27 +37,18 @@
 				<!-- Card One -->
 				<div class="card card1">
 					<div class="front">
-						<div>
-							<h1 id="climateDesc"></h1>
-						</div>
-						<div>
-							<img id="frontImg" src="" alt="weather-icon">
-						</div>
+						<h1 id="climate"></h1>
+						<img src="" alt="weather-icon" id="frontImg">
 					</div>
 					<div class="back">
-						<div class="back-div-1">
-							<p>Date & time</p>
-							<img id="backImg" src="" alt="weather-icon">
-							<p><span id="placeIcon"><i class="fas fa-map-marker-alt"></i></span>  <span id="place"></span></p>
+						<div id="dateTime">
+							<p><span id="date"></span></p>
+							<p><span id="time"></span></p>
 						</div>
-						<div class="back-div-2">
-							<h1 id="climate"></h1><br>
-							<p>Sunrise: <span id="sunrise"></span></p>
-							<p>Sunset : <span id="sunset"></span></p>
-						</div>
+						<h1 id="climateDesc"></h1>
+						<p><span id="placeIcon"><i class="fas fa-map-marker-alt"></i></span> <span id="place"></span></p>
 					</div>
 				</div>
-
 				<!-- Card Two -->
 				<div class="card card2">
 					<div class="front">
@@ -103,6 +95,18 @@
 						<p><span id="windSpeed"></span> m/s</p>
 					</div>
 				</div>
+				<!-- Card Six -->
+				<div class="card card6">
+					<div class="front">
+						<h1>Visibility</h1>
+						<span><i class="fas fa-eye"></i></span>
+					</div>
+					<div class="back">
+						<p>Visibility</p>
+						<p><span id="visibility"></span> meter</p>
+					</div>
+				</div>
+
 			</div>
 			<!-- End Card Div -->
 		</section>

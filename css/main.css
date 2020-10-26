@@ -147,6 +147,15 @@ input[type="text"]{
 .div-btn .btn:hover{
 	box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
 }
+	
+/* Alert Box */
+#alert{
+	font-size: 17px;
+	color: #ff0000;
+	font-weight: bold;
+	letter-spacing: 1.5px;
+	transition: 0.5s ease;
+}
 
 /* Card Section */
 #card-section{
@@ -169,7 +178,6 @@ input[type="text"]{
 
 /* Cards */
 .card{
-	/*background: #fff;*/
 	display: inline-block;
 	height: 200px;
 	width: 200px;
@@ -199,7 +207,6 @@ input[type="text"]{
 	height: 100%;
 	backface-visibility: hidden;
 	background: rgb(96 129 252);
-	/*color: #333 #ffc720;*/
 	color: #fff;
 	text-align: center;
 	border-radius: 30px;
@@ -218,8 +225,7 @@ input[type="text"]{
 	width: 100%;
 	height: 100%;
 	backface-visibility: hidden;
-	background: #fafafa;
-	/*color: #333;*/
+	background: #fafafa;	
 	color: rgb(96 129 252);
 	text-align: center;
 	transform: rotateY(180deg);
@@ -233,54 +239,22 @@ input[type="text"]{
 	align-items: center;
 	border: 3px solid rgb(96 129 252);
 }
-
-.card1{
-	width: 400px;
-	grid-column-start: span 2;
-	justify-self: start;
-}
-.card1 .front, .card1 .back{
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center;
-}
-
-.card1 .front div{
-	width: 50%;
-	margin: 10px;
-}
-#sunrise, #sunset{
-	font-size: 15px;
-	font-weight: bold;
-}
-
-.card1 .front div img{
+.card1 .front img{
 	width: 100px;
 	height: 100px;
+	margin-top: 10px;
 }
 
-#tempSpan{
-	font-size: 25px;
-	font-weight: bold;
-}
-.back-div-1, .back-div-2{
-	height: 100%;
-	width: 50%;
-	border-radius: 30px;
-	padding: 15px;
-}
 #climate{
-	margin-top: 20px;
-	margin-bottom: 15px;
+	margin-top: 30px;
 }
-.back-div-2 p{
-	margin-bottom: 15px;
+.card1 .back #dateTime{
+	position: absolute;
+	top: 10px;
+	left: 10px;
 }
-
-.back-div-1 p{
-	margin-top: 20px;
-	font-size: 20px;
+.card1 .back p #date, .card1 .back p #time{
+	font-size: 15px;
 }
 
 sup{
@@ -292,10 +266,10 @@ sup{
 	font-size: 15px;
 }
 
-.card2 .back p, .card3 .back p, .card4 .back p, .card5 .back p{
+.card2 .back p, .card3 .back p, .card4 .back p, .card5 .back p, .card6 .back p{
 	font-size: 25px;
 	margin-bottom: 10px;
 }
-.card2 .back p span, .card3 .back p span, .card4 .back p span, .card5 .back p span{
+.card2 .back p span, .card3 .back p span, .card4 .back p span, .card5 .back p span, .card6 .back p span{
 	font-size: 25px;
 }
