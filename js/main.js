@@ -20,6 +20,7 @@ let otherLocationBtn = document.querySelector(".other-location-btn")
 let alert = document.querySelector("#alert");
 let date = document.querySelector("#date");
 let time = document.querySelector("#time");
+let day = document.querySelector("#day");
 
 // Event for PRESS ENTER KEY
 inputBox.addEventListener("keyup", function(event){
@@ -94,8 +95,10 @@ function display(){
 				// Date and time
 				const milliseconds = objData.unixTime * 1000;
 				const dateObject = new Date(milliseconds)
-				date.innerHTML =  dateObject.toDateString();
+				// date.innerHTML =  dateObject.toDateString();
 				time.innerHTML = dateObject.toLocaleTimeString();
+				date.innerHTML =  dateObject.toLocaleDateString();
+				day.innerHTML = dateObject.toLocaleString("en-US", {weekday: "long"});
 				place.innerHTML = objData.location.toUpperCase();
 
 			}
