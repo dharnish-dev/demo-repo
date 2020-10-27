@@ -253,7 +253,7 @@ input[type="text"]{
 	top: 10px;
 	left: 10px;
 }
-.card1 .back p #date, .card1 .back p #time{
+.card1 .back p #date, .card1 .back p #time, .card1 .back p #day{
 	font-size: 15px;
 }
 
@@ -272,4 +272,67 @@ sup{
 }
 .card2 .back p span, .card3 .back p span, .card4 .back p span, .card5 .back p span, .card6 .back p span{
 	font-size: 25px;
+}
+
+/* Media Query */
+@media screen  and (max-width: 751px){
+	#card-section{
+		width: 100%;
+		height: 100%;
+		padding: 20px;
+	}
+	#card-div{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+		align-items: center;
+		position: relative;
+	}
+}
+
+@media screen and (max-width: 1200px){
+	/*Header button*/
+	header{
+		width: 100vw;
+		height: 40vh;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+	#header-btn{
+		position: relative;	
+		top: 30px;
+		right: 10px;
+		border-radius: 50px;
+	}
+	/* Tool Tip*/
+	.tooltip:before{
+		content: '';
+		position: absolute;
+		top: 0;
+		right: 95px;
+		width: 35px;
+		height: 20px;
+		background: rgb(96 129 252);
+		transform: rotate(45deg);
+	}
+
+	.tooltip{
+		position: relative;
+		top: 45px;
+		left: -15px;
+		background: rgb(96 129 252);
+		color: #fff;
+		width: 250px;
+		max-width: 250px;
+		height: 100px;
+		padding: 10px;
+		border-radius: 4px;	
+		text-align: center;
+		visibility: hidden;
+		opacity: 0;
+		transition: 0.1s;
+	}
 }
