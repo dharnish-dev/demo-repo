@@ -45,7 +45,7 @@ header{
 	color: #ffffff;
 }
 /* Tool Tip*/
-.tooltip:before{
+.tooltip-cls:before{
 	content: '';
 	position: absolute;
 	top: 0;
@@ -56,7 +56,7 @@ header{
 	transform: rotate(45deg);
 }
 
-.tooltip{
+.tooltip-cls{
 	position: absolute;
 	top: 60px;
 	right: 20px;
@@ -70,15 +70,15 @@ header{
 	visibility: hidden;
 	opacity: 0;
 	transition: 0.5s;
+	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
-.tooltip p{
+.tooltip-cls p{
 	margin-top: 13px;
 }
 
-#header-btn:hover + .tooltip{
+#header-btn:hover + .tooltip-cls{
 	visibility: visible;
 	opacity: 1;
-	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 
 /* Search Section */
@@ -153,8 +153,7 @@ input[type="text"]{
 	font-size: 17px;
 	color: #ff0000;
 	font-weight: bold;
-	letter-spacing: 1.5px;
-	transition: 0.5s ease;
+	letter-spacing: 1px;
 }
 
 /* Card Section */
@@ -294,8 +293,8 @@ sup{
 @media screen and (max-width: 1200px){
 	/*Header button*/
 	header{
-		width: 100vw;
-		height: 40vh;
+		/*width: 100vw;*/
+		/*height: 40vh;*/
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -308,7 +307,7 @@ sup{
 		border-radius: 50px;
 	}
 	/* Tool Tip*/
-	.tooltip:before{
+	.tooltip-cls:before{
 		content: '';
 		position: absolute;
 		top: 0;
@@ -319,20 +318,26 @@ sup{
 		transform: rotate(45deg);
 	}
 
-	.tooltip{
+	.tooltip-cls{
 		position: relative;
 		top: 45px;
 		left: -15px;
 		background: rgb(96 129 252);
 		color: #fff;
 		width: 250px;
-		max-width: 250px;
 		height: 100px;
 		padding: 10px;
 		border-radius: 4px;	
 		text-align: center;
 		visibility: hidden;
 		opacity: 0;
-		transition: 0.1s;
+		transition: 0.5s;
+		margin-bottom: 15px;
+		box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+	}
+
+	#header-btn:hover + .tooltip-cls{
+		visibility: visible;
+		opacity: 1;
 	}
 }

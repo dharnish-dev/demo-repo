@@ -21,7 +21,7 @@ let alert = document.querySelector("#alert");
 let date = document.querySelector("#date");
 let time = document.querySelector("#time");
 let day = document.querySelector("#day");
-
+let tooltip = document.querySelector(".tooltip");
 // Event for PRESS ENTER KEY
 inputBox.addEventListener("keyup", function(event){
 	if (event.keyCode === 13) {
@@ -80,6 +80,8 @@ function display(){
 				cardSection.classList.remove("hidden");
 				// remove hidden class from btn inside header
 				otherLocationBtn.classList.remove("hidden");
+				// add tooltip class
+				tooltip.classList.remove("hidden");
 			}
 
 			// display function - write innerHTML
@@ -95,10 +97,10 @@ function display(){
 				// Date and time
 				const milliseconds = objData.unixTime * 1000;
 				const dateObject = new Date(milliseconds)
-				// date.innerHTML =  dateObject.toDateString();
 				time.innerHTML = dateObject.toLocaleTimeString();
 				date.innerHTML =  dateObject.toLocaleDateString();
 				day.innerHTML = dateObject.toLocaleString("en-US", {weekday: "long"});
+
 				place.innerHTML = objData.location.toUpperCase();
 
 			}
@@ -123,6 +125,8 @@ function goBack(){
 	body.style.backgroundColor = "#6081FC";
 	// Change header h1 color
 	headerText.style.color = "#FFFFFF";
+	// Go Back Button
+	tooltip.classList.add("hidden");
 }
 // check Input Validation
 function inputValidation(location){ 
