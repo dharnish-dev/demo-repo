@@ -22,6 +22,8 @@ let date = document.querySelector("#date");
 let time = document.querySelector("#time");
 let day = document.querySelector("#day");
 let tooltip = document.querySelector(".tooltip");
+let alertContainer = document.querySelector("#alert-container");
+
 // Event for PRESS ENTER KEY
 inputBox.addEventListener("keyup", function(event){
 	if (event.keyCode === 13) {
@@ -66,7 +68,9 @@ function display(){
 				displayContent(objData);
 			})
 			.catch((err) => {
+				alertContainer.classList.remove("visibility-hidden");
 				alert.innerHTML = "Failed " +err;
+				setTime();
 			})
 
 			function changeStyle(){
@@ -131,14 +135,18 @@ function goBack(){
 // check Input Validation
 function inputValidation(location){ 
 	if (isEmpty(location)) {
+		alertContainer.classList.remove("visibility-hidden");
 		alert.innerHTML = "Enter Valid Characters !!!.Input is empty";	
+		setTime();
 	} else {
 		let pattern = /^[a-zA-Z\s]*$/g;
 		let result = pattern.test(location.trim());
 		if (result) {
 			return true;
 		}else{
+			alertContainer.classList.remove("visibility-hidden");
 			alert.innerHTML = "Enter Alphabets only !!!";
+			setTime();
 		}
 	}
 }
@@ -151,3 +159,8 @@ function isEmpty(inputVal) {
 		return inputVal.length == 0;
 	}
 }
+
+// Hide Alert Text
+function setTime(){
+	setTimeout(function(){ alertContainer.classList.add("visibility-hidden"); }, 3200);
+};
