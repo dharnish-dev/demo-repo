@@ -83,6 +83,22 @@ header{
 
 /* Search Section */
 
+/* Alert Box */
+#alert-container{
+	width: 380px;
+	height: 10px;
+	position: relative;
+	text-align: center;
+}
+#alert{
+	font-size: 17px;
+	color: #ff0000;
+	font-weight: bold;
+	letter-spacing: 1px;
+}
+.visibility-hidden{
+	visibility: hidden;
+}
 section{
 	display: flex;
 	flex-direction: column;
@@ -96,6 +112,7 @@ section{
 	background-color: #ffffff;
 	border-radius: 50px;
 	position: relative;
+	top: 10px;
 	margin-bottom: 20px;
 	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
@@ -130,6 +147,9 @@ input[type="text"]{
 	right: 20px;
 	color: #393e46;
 }
+.div-btn{
+	margin-top: 10px;
+}
 
 .div-btn .btn{
 	padding: 10px 20px;
@@ -147,15 +167,6 @@ input[type="text"]{
 .div-btn .btn:hover{
 	box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
 }
-	
-/* Alert Box */
-#alert{
-	font-size: 17px;
-	color: #ff0000;
-	font-weight: bold;
-	letter-spacing: 1px;
-}
-
 /* Card Section */
 #card-section{
 	width: 100vw;
